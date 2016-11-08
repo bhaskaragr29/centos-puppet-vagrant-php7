@@ -1,0 +1,57 @@
+epelrelease:
+   rpm:   https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+webstatic:
+   rpm:   https://mirror.webtatic.com/yum/el6/latest.rpm
+php:
+   settings:
+      version:   '70'
+   modules70:
+      - php70w
+      - php70w-opcache
+      - php70w-xml
+      - php70w-mcrypt
+      - php70w-gd
+      - php70w-devel
+      - php70w-mysql
+      - php70w-intl
+      - php70w-mbstring
+      - php70w-common
+      - php70w-bcmath
+      - php70w-phpdbg
+      - mysql
+   modules56:
+      - php56w
+      - php56w-opache
+      - php56w-xml
+      - php56w-mcrypt
+      - php56w-gd
+      - php56w-devel
+      - php56w-mysql
+      - php56w-intl
+      - php56w-mbstring
+      - php56w-common
+      - php56w-bcmath
+   ini:
+      display_errors: 'On'
+      error_reporting: '-1'
+      session.save_path: /var/lib/php/session
+      date.timezone: UTC
+      composer: '1'
+   drush:
+      install: '1'
+      version: 8.0.5
+   phpunit:
+      install: '1'
+      url:  https://phar.phpunit.de/phpunit.phar
+#   xdebug:
+# 	install: '0'
+# 	settings:
+# 	    xdebug.default_enable: '1'
+# 	    xdebug.remote_autostart: '0'
+# 	    xdebug.remote_connect_back: '1'
+# 	    xdebug.remote_enable: '1'
+# 	    xdebug.remote_handler: dbgp
+# 	    xdebug.remote_port: '9000'
+#   drush:
+# 	install: '1'
+# 	version: 8.0.5

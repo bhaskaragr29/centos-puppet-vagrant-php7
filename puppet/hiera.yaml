@@ -1,0 +1,7 @@
+:hierarchy:
+  - %{::osfamily}/%{::operatingsystem}/%{::operatingsystemmajrelease}/config
+  - common
+:backends:
+  - yaml
+:yaml:
+  :datadir: '/vagrant/puppet/hieradata'
